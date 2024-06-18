@@ -44,8 +44,7 @@ public class CreateUserTest {
     @Step("Проверка возможности создания дубля пользователя")
     public void checkCreateUserTwice() {
         User user = new User("krolevski@mail.ru", "1234", "Eri");
-
-        Response responseCreateOne = userApi.creatingUser(user);
+        userApi.creatingUser(user);
 
         Response responseCreateTwo = userApi.creatingUser(user);
 
